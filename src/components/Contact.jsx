@@ -47,18 +47,18 @@ const Contact = () => {
                     <div>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-gray-300 mb-2">Your Name</label>
-                                <input type="text" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" />
+                                <label htmlFor="name" name="name" className="block text-gray-300 mb-2">Your Name</label>
+                                <input type="text" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
                             </div>
 
                             <div>
-                                <label htmlFor="email" className="block text-gray-300 mb-2">Email Address</label>
-                                <input type="email" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" />
+                                <label htmlFor="email" name="email" className="block text-gray-300 mb-2">Email Address</label>
+                                <input type="email" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
                             </div>
 
                             <div>
-                                <label htmlFor="message" className="block text-gray-300 mb-2">Your Message</label>
-                                <textarea type="text" className="w-full h-40 bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" />
+                                <label htmlFor="message" name="message" className="block text-gray-300 mb-2">Your Message</label>
+                                <textarea type="text" className="w-full h-40 bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
                             </div>
 
                             <button type='submit' className="w-full px-6 py-3 bg-purple rounded-lg font-medium hover:bg-purple-700
