@@ -78,6 +78,19 @@ const Contact = () => {
                             transition duration-300 cursor-pointer">
                                 {loading ? "Sending..." : "Send Message"}
                             </button>
+
+                            {status === "SUCCESS" && (
+                                <p className="text-green-400 text-center mt-4">
+                                    Message sent successfully!
+                                </p>
+                            )}
+
+                            {status === "ERROR" && (
+                                <p className="text-red-400 text-center mt-4">
+                                    Something went wrong. Try again.
+                                </p>
+                            )}
+
                         </form>
                     </div>
 
