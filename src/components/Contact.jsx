@@ -3,10 +3,12 @@ import { motion } from 'framer-motion'
 import { FaEnvelope, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { LiaLinkedin } from "react-icons/lia";
 
-const [status, setStatus] = React.useState("");
-const [loading, setLoading] = React.useState(false);
 
 const Contact = () => {
+
+    const [status, setStatus] = React.useState("");
+    const [loading, setLoading] = React.useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
