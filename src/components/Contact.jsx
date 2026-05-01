@@ -24,7 +24,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {/**contact form */}
                     <div>
-                        <form className="space-y-6">
+                        <form action="https://formspree.io/f/mbdwlyld " method="POST" className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-gray-300 mb-2">Your Name</label>
                                 <input type="text" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" />

@@ -74,7 +74,7 @@ export const projects = [
     tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
     icons: [FaReact, FaCloud],
     demo: "#",
-    code: "#",
+    code: "https://github.com/Kumar24Gaurav/Portfolio/tree/main",
   },
   {
     title: "Finance Tracker",
