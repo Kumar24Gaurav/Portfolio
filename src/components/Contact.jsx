@@ -3,27 +3,38 @@ import { motion } from 'framer-motion'
 import { FaEnvelope, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { LiaLinkedin } from "react-icons/lia";
 
+const [status, setStatus] = React.useState("");
+const [loading, setLoading] = React.useState(false);
 
 const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        setLoading(true);
+        setStatus("");
+
         const formData = new FormData(e.target);
 
-        const response = await fetch("https://formspree.io/f/mbdwlyld", {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json"
-            }
-        });
+        try {
+            const response = await fetch("https://formspree.io/f/mbdwlyld", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
 
-        if (response.ok) {
-            alert("Message sent successfully!");
-            e.target.reset(); // clears form
-        } else {
-            alert("Something went wrong!");
+            if (response.ok) {
+                setStatus("SUCCESS");
+                e.target.reset();
+            } else {
+                setStatus("ERROR");
+            }
+        } catch (error) {
+            setStatus("ERROR");
         }
+
+        setLoading(false);
     };
 
     return (
@@ -63,7 +74,7 @@ const Contact = () => {
 
                             <button type='submit' className="w-full px-6 py-3 bg-purple rounded-lg font-medium hover:bg-purple-700
                             transition duration-300 cursor-pointer">
-                                Send Message
+                                {loading ? "Sending..." : "Send Message"}
                             </button>
                         </form>
                     </div>
@@ -76,7 +87,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2">Location</h3>
-                                <p className="text-gray-400">Bengaluru, Surjapur</p>
+                                <p className="text-gray-400">Surjapur, Bengaluru</p>
                             </div>
                         </div>
 
@@ -96,7 +107,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-lg font-semibold mb-2">Phone</h3>
-                                <p className="text-gray-400">(+91) 7079143226 | (+91) 7200098637</p>
+                                <p className="text-gray-400">(+91) 7079143226</p>
                             </div>
                         </div>
 
