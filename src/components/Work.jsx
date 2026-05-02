@@ -12,7 +12,7 @@ const Work = () => {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: false, amount: 0.2 }}
             id='experience'
-            className='py-20 bg-dark-200'
+            className='py-20 px-7 bg-dark-200'
         >
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl font-bold text-center mb-4">Work <span className="text-purple">Experience</span></h2>

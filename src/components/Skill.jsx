@@ -12,7 +12,7 @@ const Skill = () => {
             transition={{ duration: 1, ease: 'easeOut' }}
             viewport={{ once: false, amount: 0.2 }}
             id='skills'
-            className='py-20'
+            className='py-20 px-7'
         >
             <div className='container mx-auto px-6'>
                 <h2 className='text-3xl font-bold text-center mb-4'>

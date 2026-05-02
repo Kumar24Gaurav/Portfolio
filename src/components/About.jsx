@@ -40,7 +40,7 @@ const About = () => {
                         viewport={{ once: false, amount: 0.2 }}
                         className="md:w-2/3"
                     >
-                        <div className="rounded-2xl p-8 text-left md:text-left">
+                        <div className="rounded-2xl text-left md:text-left">
                             <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
                             <p className="text-gray-300 mb-4">
                                 I'm a passionate self-taught developer with a strong foundation in Python and a growing expertise in full stack development. My journey into programming began with a curiosity for how things work and a desire to create impactful solutions.
