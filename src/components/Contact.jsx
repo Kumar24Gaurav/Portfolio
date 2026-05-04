@@ -116,7 +116,7 @@ const Contact = () => {
                                 {loading ? "Sending..." : "Send Message"}
                             </button>
 
-                            {status === "SUCCESS" && (
+                            {/* {status === "SUCCESS" && (
                                 <p className="text-green-400 text-center mt-4">
                                     Message sent successfully!
                                 </p>
@@ -126,7 +126,7 @@ const Contact = () => {
                                 <p className="text-red-400 text-center mt-4">
                                     Something went wrong. Try again.
                                 </p>
-                            )}
+                            )} */}
 
                         </form>
                     </div>
@@ -175,6 +175,11 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
+                    {showPopup && (
+                        <div className="fixed top-5 right-5 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+                            Message sent successfully!
+                        </div>
+                    )}
                 </div>
             </div>
         </motion.div>
