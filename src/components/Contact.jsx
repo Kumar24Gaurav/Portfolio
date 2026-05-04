@@ -2,42 +2,73 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaEnvelope, FaGithub, FaMapMarkerAlt, FaPhone } from 'react-icons/fa';
 import { LiaLinkedin } from "react-icons/lia";
+import { useForm } from "react-hook-form";
 
 
 const Contact = () => {
 
-    const [status, setStatus] = React.useState("");
-    const [loading, setLoading] = React.useState(false);
+    // const [status, setStatus] = React.useState("");
+    // const [loading, setLoading] = React.useState(false);
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
+    //     setLoading(true);
+    //     setStatus("");
+
+    //     const formData = new FormData(e.target);
+
+    //     try {
+    //         const response = await fetch("https://formspree.io/f/mbdwlyld", {
+    //             method: "POST",
+    //             body: formData,
+    //             headers: {
+    //                 Accept: "application/json"
+    //             }
+    //         });
+
+    //         if (response.ok) {
+    //             setStatus("SUCCESS");
+    //             e.target.reset();
+    //         } else {
+    //             setStatus("ERROR");
+    //         }
+    //     } catch (error) {
+    //         setStatus("ERROR");
+    //     }
+
+    //     setLoading(false);
+    // };
+    const [status, setStatus] = useState("");
+    const [loading, setLoading] = useState(false);
+
+    const { register, handleSubmit } = useForm();
+
+    function submitForm(data) {
         setLoading(true);
         setStatus("");
 
-        const formData = new FormData(e.target);
-
-        try {
-            const response = await fetch("https://formspree.io/f/mbdwlyld", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json"
-                }
-            });
-
-            if (response.ok) {
-                setStatus("SUCCESS");
-                e.target.reset();
-            } else {
-                setStatus("ERROR");
+        fetch("https://formspree.io/f/mbdwlyld", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
             }
-        } catch (error) {
-            setStatus("ERROR");
-        }
-
-        setLoading(false);
-    };
+        })
+            .then((response) => {
+                if (response.ok) {
+                    setStatus("SUCCESS");
+                    setLoading(false);
+                } else {
+                    setStatus("ERROR");
+                    setLoading(false);
+                }
+            })
+            .catch((error) => {
+                setStatus("ERROR");
+                setLoading(false);
+            });
+    }
 
     return (
         <motion.div
@@ -58,20 +89,20 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                     {/**contact form */}
                     <div>
-                        <form onSubmit={handleSubmit} className="space-y-6">
+                        <form onSubmit={handleSubmit(submitForm)} className="space-y-6">
                             <div>
                                 <label htmlFor="name" className="block text-gray-300 mb-2">Your Name</label>
-                                <input type="text" name="name" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
+                                <input type="text" name="name" id="name" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" {...register("name", { required: true })} />
                             </div>
 
                             <div>
                                 <label htmlFor="email" className="block text-gray-300 mb-2">Email Address</label>
-                                <input type="email" name="email" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
+                                <input type="email" name="email" id="email" className="w-full bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" {...register("email", { required: true })} />
                             </div>
 
                             <div>
                                 <label htmlFor="message" className="block text-gray-300 mb-2">Your Message</label>
-                                <textarea type="text" name="message" className="w-full h-40 bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" required />
+                                <textarea type="text" name="message" id="message" className="w-full h-40 bg-dark-300 border border-dark-400 rounded-lg px-4 py-3 outline-none" {...register("message", { required: true })} />
                             </div>
 
                             <button type='submit' className="w-full px-6 py-3 bg-purple rounded-lg font-medium hover:bg-purple-700
