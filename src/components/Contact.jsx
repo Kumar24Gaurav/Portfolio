@@ -41,6 +41,7 @@ const Contact = () => {
     // };
     const [status, setStatus] = useState("");
     const [loading, setLoading] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
     const { register, handleSubmit } = useForm();
 
@@ -59,6 +60,11 @@ const Contact = () => {
                 if (response.ok) {
                     setStatus("SUCCESS");
                     setLoading(false);
+                    setShowPopup(true);
+
+                    setTimeout(() => {
+                        setShowPopup(false);
+                    }, 3000);
                 } else {
                     setStatus("ERROR");
                     setLoading(false);
