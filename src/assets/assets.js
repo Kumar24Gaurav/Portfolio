@@ -77,12 +77,12 @@ export const projects = [
     code: "https://github.com/Kumar24Gaurav/Portfolio/tree/main",
   },
   {
-    title: "Finance Tracker",
+    title: "FinSight - Financial Analytics and Expense Management Platform",
     description: "A real-time finance tracking application with data visualization, JWT-based authentication, and role-based user access control.",
     image: projectImg5,
     tech: ["Flask", "HTML/CSS", "JavaScript", "Python", "MySQL"],
     icons: [FaReact, FaNodeJs, FaDatabase],
-    demo: "#",
+    demo: "https://fin-sight-sandy.vercel.app/",
     code: "https://github.com/Kumar24Gaurav/Finance_tracker/tree/master",
   }
 ];
