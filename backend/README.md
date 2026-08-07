@@ -66,7 +66,7 @@ backend/
 
 ---
 
-## �️ Images
+## Images
 
 If you want to document the backend architecture visually, include:
 - `backend/architecture.png` for service flow and components
@@ -81,7 +81,7 @@ Place images in the `backend/` folder and reference them in markdown like:
 
 ---
 
-## �📥 Installation
+## 📥 Installation
 
 ### 1. Create a virtual environment
 
