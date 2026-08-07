@@ -6,8 +6,7 @@ from dotenv import load_dotenv
 from app.api.chat_routes import router as chat_router
 
 load_dotenv()
-local_url = os.getenv("LOCAL_URL")
-vite_api_url = os.getenv("VITE_API_URL")
+local_url = os.getenv("ALLOWED_ORIGINS").split(",")
 
 app = FastAPI(
     title="AI Portfolio Assistant API",
@@ -17,9 +16,7 @@ app = FastAPI(
 #CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        local_url or vite_api_url
-    ],
+    allow_origins=local_url,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
