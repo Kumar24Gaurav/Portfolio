@@ -31,7 +31,24 @@ def search_resume(resume, query: str):
     if any(word in query for word in ["skill", "technology", "tech stack"]):
         return resume.skills
 
-    if "education" in query:
+    if any(word in query for word in [
+        "education",
+        "study",
+        "studies",
+        "graduation",
+        "graduate",
+        "degree",
+        "college",
+        "university",
+        "b.tech",
+        "btech",
+        "bachelor",
+        "diploma",
+        "polytechnic",
+        "school",
+        "10th",
+        "12th"
+    ]):
         return resume.education
 
     if "experience" in query:

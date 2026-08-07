@@ -9,7 +9,8 @@ class Education(BaseModel):
     degree: str
     college: str
     score: Optional[str] = None
-
+    year: Optional[str] = None
+    
 class Experience(BaseModel):
     company: str
     role: str
