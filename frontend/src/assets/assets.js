@@ -7,6 +7,7 @@ import projectImg3 from '../assets/project3.avif';
 import projectImg4 from '../assets/project4.avif';
 import projectImg5 from '../assets/project5.avif';
 import projectImg6 from '../assets/project6.avif';
+import projectImg7 from '../assets/project7.png';
 
 
 export const assets = {
@@ -61,6 +62,12 @@ export const skills = [
     icon: FaTools,
     description: 'Essential tools and technologies I use in my development workflow.',
     tags: ['Git & GitHub', 'Postman', 'VS Code']
+  },
+  {
+    title: 'Generative AI & LLMs',
+    icon: FaRobot,
+    description: 'Exploring the potential of generative AI and large language models in creating innovative solutions.',
+    tags: ['Python', 'Transformers', 'Hugging Face', 'LLM']
   }
 ];
 
@@ -84,6 +91,15 @@ export const projects = [
     icons: [FaReact, FaNodeJs, FaDatabase],
     demo: "https://fin-sight-sandy.vercel.app/",
     code: "https://github.com/Kumar24Gaurav/Finance_tracker/tree/master",
+  },
+  {
+    title: "Medical Chatbot - AI-powered Healthcare Assistant",
+    description: "An AI-powered medical chatbot that provides instant responses to health-related queries, leveraging natural language processing and machine learning.",
+    image: projectImg7,
+    tech: ["Python", "Streamlit", "Groq", "LLM", "AI"],
+    icons: [FaRobot, FaFire],
+    demo: "https://kumar24gaurav-health-care-assistant-app-e90psv.streamlit.app",
+    code: "https://github.com/Kumar24Gaurav/Health_care_Assistant"
   }
 ];
 
