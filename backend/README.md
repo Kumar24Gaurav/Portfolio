@@ -67,17 +67,14 @@ backend/
 ---
 
 ## Images
+#### GET
+![pic 1](images/get.png)
+#### POST - Stream
+![pic 1](images/post-stream-01.png)
+![pic 1](images/post-stream-02.png)
+#### POST - Reset_chat
+![pic 1](images/post-reset-chat.png)
 
-If you want to document the backend architecture visually, include:
-- `backend/architecture.png` for service flow and components
-- `backend/api-flow.png` for chat request -> tool execution -> response path
-- `backend/sequence-diagram.png` for resume parsing, tool calls, and response generation
-
-Place images in the `backend/` folder and reference them in markdown like:
-
-```md
-![Architecture diagram](architecture.png)
-```
 
 ---
 
