@@ -40,6 +40,8 @@ including projects and experience sections.
 7. Do not wrap JSON inside markdown.
 
 8. Do not explain your answer.
+
+9. Include btech as graduation degree.
 """
 
 
