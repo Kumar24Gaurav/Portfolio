@@ -3,7 +3,7 @@ import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTo
 import profileImg from '../assets/profile.png';
 import projectImg7 from '../assets/project7.png';
 import home_page from '../assets/home_page.png';
-import user_transaction_analytics from '../assets/user_transaction_analytics.png';
+import user_transaction_analytics from '../assets/user_trasaction_analytics.png';
 
 
 export const assets = {
