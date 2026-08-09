@@ -71,7 +71,7 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Portfolio Website",
+    title: "ChatBot Portfolio Website",
     description: "A personal portfolio website to showcase projects, technical skills, and blogs in a clean and structured manner.",
     image: home_page,
     tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
