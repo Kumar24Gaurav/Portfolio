@@ -1,13 +1,9 @@
 import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTools, FaNodeJs, FaStripe, FaVuejs, FaFire, FaDatabase, FaCloud, FaRobot } from 'react-icons/fa';
 
 import profileImg from '../assets/profile.png';
-import projectImg1 from '../assets/project1.avif';
-import projectImg2 from '../assets/project2.avif';
-import projectImg3 from '../assets/project3.avif';
-import projectImg4 from '../assets/project4.avif';
-import projectImg5 from '../assets/project5.avif';
-import projectImg6 from '../assets/project6.avif';
 import projectImg7 from '../assets/project7.png';
+import home_page from '../assets/home_page.png';
+import user_transaction_analytics from '../assets/user_transaction_analytics.png';
 
 
 export const assets = {
@@ -77,7 +73,7 @@ export const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects, technical skills, and blogs in a clean and structured manner.",
-    image: projectImg4,
+    image: home_page,
     tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
     icons: [FaReact, FaCloud],
     demo: "#",
@@ -86,7 +82,7 @@ export const projects = [
   {
     title: "FinSight - Financial Analytics and Expense Management Platform",
     description: "A real-time finance tracking application with data visualization, JWT-based authentication, and role-based user access control.",
-    image: projectImg5,
+    image: user_transaction_analytics,
     tech: ["Flask", "HTML/CSS", "JavaScript", "Python", "MySQL"],
     icons: [FaReact, FaNodeJs, FaDatabase],
     demo: "https://fin-sight-sandy.vercel.app/",
