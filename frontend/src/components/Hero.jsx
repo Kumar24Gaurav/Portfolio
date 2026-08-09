@@ -19,7 +19,7 @@ const Hero = () => {
                     <h1 className='text-4xl md:text-6xl font-bold mb-4'>
                         Hi, I'm <span className='text-purple'>Kumar Gaurav</span>
                     </h1>
-                    <h2 className='text-2xl md:text-4xl font-semibold mb-6 typewriter'>Full Stack Developer with GEN AI</h2>
+                    <h2 className='text-2xl md:text-4xl font-semibold mb-6 typewriter'>Full Stack with GEN AI</h2>
                     <p className='text-lg text-gray-300 mb-8'> I am a passionate Full Stack Developer with a strong foundation in building scalable web applications using modern technologies. I specialize in developing efficient backend systems with Python and integrating them with responsive, user-friendly frontend interfaces using React.</p>
                     <div className='flex space-x-4'>
                         <a href="#projects" className='px-6 py-3 bg-purple rounded-lg font-medium hover:bg-purple-700 transition duration:300'>View Work</a>
