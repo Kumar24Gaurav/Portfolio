@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { FaRobot } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 function FloatingButton({
     onClick,
@@ -23,21 +23,16 @@ function FloatingButton({
                         y: 0,
                         scale: 1
                     }}
-                    exit={{
-                        opacity: 0,
-                        y: 10,
-                        scale: 0.9
-                    }}
                     transition={{
-                        duration: 0.4,
-                        delay: 1
+                        duration: 0.35,
+                        delay: 0.8
                     }}
                     className="
                         absolute
                         bottom-20
                         right-0
 
-                        w-[220px]
+                        w-[230px]
 
                         px-4
                         py-3
@@ -45,10 +40,11 @@ function FloatingButton({
                         rounded-2xl
 
                         bg-zinc-950
+
                         border
                         border-violet-500/30
 
-                        shadow-xl
+                        shadow-2xl
                         shadow-violet-500/20
 
                         text-white
@@ -66,11 +62,11 @@ function FloatingButton({
                             w-6
                             h-6
 
-                            rounded-full
-
                             flex
                             items-center
                             justify-center
+
+                            rounded-full
 
                             text-zinc-400
 
@@ -87,15 +83,17 @@ function FloatingButton({
 
 
                     {/* Notification Content */}
-                    <div className="flex items-start gap-3 pr-4">
+                    <div className="flex items-start gap-3 pr-5">
 
                         {/* Robot Icon */}
                         <div
                             className="
+                                w-9
+                                h-9
+
                                 mt-1
 
-                                w-8
-                                h-8
+                                shrink-0
 
                                 rounded-full
 
@@ -107,11 +105,9 @@ function FloatingButton({
                                 flex
                                 items-center
                                 justify-center
-
-                                shrink-0
                             "
                         >
-                            <FaRobot size={14} />
+                            <FaRobot size={15} />
                         </div>
 
 
@@ -173,12 +169,12 @@ function FloatingButton({
                 transition={{
                     type: "spring",
                     stiffness: 260,
-                    damping: 20,
-                    delay: 0.5
+                    damping: 20
                 }}
 
                 whileHover={{
-                    scale: 1.1
+                    scale: 1.1,
+                    rotate: 6
                 }}
 
                 whileTap={{
@@ -186,8 +182,14 @@ function FloatingButton({
                 }}
 
                 className="
+                    relative
+
                     w-16
                     h-16
+
+                    flex
+                    items-center
+                    justify-center
 
                     rounded-2xl
 
@@ -201,17 +203,15 @@ function FloatingButton({
                     border
                     border-white/10
 
-                    shadow-xl
+                    shadow-2xl
                     shadow-violet-500/30
 
-                    flex
-                    items-center
-                    justify-center
-
-                    hover:shadow-violet-500/50
-
-                    transition-shadow
+                    transition-all
                     duration-300
+
+                    hover:shadow-violet-500/60
+
+                    active:scale-95
                 "
             >
                 <FaRobot size={28} />
