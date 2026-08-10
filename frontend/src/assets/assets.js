@@ -74,7 +74,7 @@ export const projects = [
     title: "ChatBot Portfolio Website",
     description: "A personal portfolio website to showcase projects, technical skills, and blogs in a clean and structured manner.",
     image: home_page,
-    tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend"],
+    tech: ["React", "Tailwind CSS", "Framer Motion", "Frontend", "Python", "LLM", "Generative AI", "Prompt Engineering"],
     icons: [FaReact, FaCloud],
     demo: "#",
     code: "https://github.com/Kumar24Gaurav/Portfolio/tree/main",
