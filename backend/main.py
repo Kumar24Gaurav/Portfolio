@@ -31,3 +31,10 @@ def root():
     return {
         "message": "AI Portfolio Assistant Backend Running"
     }
+
+# Health check endpoint: to keep system alive
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy"
+    }
